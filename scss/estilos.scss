@@ -1,0 +1,536 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo {
+    color: #0B486B;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.contenedores {
+    margin: 10px;
+}
+
+main {
+    background-color: #F6F6E9;
+}
+
+/*INDEX*/
+
+/*header*/
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #0B486B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0B486B,  #88a2aa, #EDCB96);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0B486B,  #88a2aa, #EDCB96); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    grid-area: header;
+}
+
+nav {
+    background: #0B486B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0B486B,  #88a2aa, #EDCB96);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0B486B,  #88a2aa, #EDCB96); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 10px;
+    list-style-type: none;
+    list-style: none;
+}
+
+ a {
+    color: #FFF;
+    font-weight: 200;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+.menu > li { 
+   position: relative;
+   display: inline-block
+}
+
+.menu > li > a{
+    display: block;
+    padding: 10px 10px;
+    color: #FFF;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.submenu{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: #FFF;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu li a:hover {
+   color: #005792;
+   transition: all .3s;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;  
+}
+
+.texHeader {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 33px; } h3 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+
+h1 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 33px; } h3 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+
+/*nuestras Oficinas*/
+
+.nuestrasOficinas {
+    background-color: #FFF;
+}
+
+.galeriaFot {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    align-content: stretch;
+    justify-self: stretch
+}
+
+.imagen {
+    margin: 3px;
+}
+
+/*clientes*/
+
+.contenedorClientes {
+    background-color: #FFF;
+    height: 600px;
+    padding-top: 125px;
+}
+
+.opiniones {
+    display: grid;
+    grid-template-areas: "opinionUno opinionDos"
+    "opinionUno opinionDos"
+    "opinionUno opinionDos";
+    height: 300px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+}
+
+.opinionUno {
+    background-color: #0B486B;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.opinionDos {
+    background-color: #0B486B;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Footer*/
+footer {
+    background: #0B486B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EDCB96,  #88a2aa, #0B486B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EDCB96,  #88a2aa, #0B486B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    color: #F6F6E9;
+    grid-area: footer;
+}
+
+.contenedorFooter {
+    display: flex;     
+    flex-direction: column; 
+    justify-content: space-around;
+    height: 300px;
+    margin-top: 50px;
+}
+
+/*SEGUROS*/
+
+.seguros { 
+   display: grid;
+   grid-template-areas:
+     "areaSeguros areaSeguros areaSeguros"
+     "areaSeguros areaSeguros areaSeguros"
+     "productos productos productos"
+     "productos productos productos"
+     "compañías compañías compañías"
+     "compañías compañías compañías"
+     "poliza poliza poliza"
+     "poliza poliza poliza";
+    height: 1500px;
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #FFF;
+    grid-row-gap: 4px;
+}
+
+.areaSeguros {
+    grid-area: areaSeguros;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.segurosTitle {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+.productos {
+    grid-area: productos;
+}
+
+.compañías {
+    grid-area: compañías;
+}
+
+.poliza {
+    grid-area: poliza;
+}
+
+
+/*CONTACTO*/
+
+.mainContacto {
+    background-color: #FFF;
+
+}
+.contacto {
+    display: grid;
+    height: 400px;
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #FFF;
+    grid-row-gap: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.contactoTitle {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+.mainContacto {
+    height: 1500px;
+}
+
+/*Formulario*/
+
+
+.formulario {
+    display: grid;
+    grid-template-areas: "name name name name"
+    "medio medio medio medio"
+    "info info info info"
+    "info info info info"
+    "consulta consulta consulta consulta"
+    "consulta consulta consulta consulta"
+    "siQuiero siQuiero siQuiero siQuiero"
+    "botones botones botones botones";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 91.25px 91.25px 91.25px 91.25px 91.25px 91.25px 91.25px 91.25px;
+    height: 750px;
+    margin: 15px 20px 20px 15px;
+    border-style: solid; 
+    border-color: #0B486B;
+    background-color: #0B486B;
+    color: #FFF;
+}
+
+.name {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    grid-area: name;
+}
+
+.medio {
+    grid-area: medio;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.info {
+    grid-area: info;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.consulta {
+    grid-area: consulta;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.siQuiero {
+    grid-area: siQuiero;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.botones {
+    grid-area: botones;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.form-control {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+.form-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+input {
+    padding-top: 5px;
+
+}
+
+/*CONTABLE*/
+
+.contableTitle {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 60px;
+
+}
+.contable {
+    display: grid;
+    grid-template-areas:
+    "areaContable areaContable areaContable"
+    "areaContable areaContable areaContable"
+    "areaContable areaContable areaContable"
+    "serviciosContables serviciosContables serviciosContables"
+    "serviciosContables serviciosContables serviciosContables"
+    "serviciosContables serviciosContables serviciosContables"
+    "serviciosContables serviciosContables serviciosContables"
+    "serviciosContables serviciosContables serviciosContables"
+    "mercado mercado mercado"
+    "mercado mercado mercado"
+    "mercado mercado mercado"
+    "mercado mercado mercado"
+    "mercado mercado mercado";
+    height: 2250px;
+    grid-template-rows: repeat(13, 1fr);
+    background-color: #FFF;
+    grid-row-gap: 4px;
+}
+
+.areaContable {
+    grid-area: areaContable;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.serviciosContables {
+    grid-area: serviciosContables;
+}
+
+.mercado {
+    grid-area: mercado;
+}
+
+/*CAPACITACIONES*/
+
+.placaProximamente {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.areaCapacitaciones {
+    display: grid;
+    height: 1250px;
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #FFF;
+    grid-row-gap: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.capacitacionesTitle {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+/*QUIENES SOMOS*/
+
+.nosotros {
+    display: grid;
+    height: 400px;
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #fff;
+    grid-row-gap: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+
+}
+
+.presentacion {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2000px;
+    align-items: flex-start;
+}
+
+.cardPresentacion {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.cardPresentacionImg {
+    height: 300px;
+    width: 300px;
+    align-items: flex-start;
+}
+
+.cardPresentacionText {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.nosotrosTitle {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+/*BOOTSTRAP*/
+.container, .container, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 80%;
+    height: 500px; 
+    overflow: hidden;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and  (max-width: 576px) {
+    .galeriaFot {
+        grid-template-columns: 1fr 1fr;
+        background-color: #FD5F00;
+     }
+}
+
+@media only screen and  (max-width: 576px) {
+    .opiniones {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "opinionUno opinionUno opinionUno"
+        "opinionDos opinionDos opinionDos"
+    }
+ }
+
+ @media screen and (max-width: 400px) {
+    .index {
+        background-color: #13334c;
+    }
+
+    .opinionUno {
+        width: 100%;
+    }
+
+    .opinionDos {
+        width: 100%;
+    }
+ }
+ 
+ @media screen and (max-width: 750px) {
+    .index {
+        background-color: #FD5F00;
+    }
+}
